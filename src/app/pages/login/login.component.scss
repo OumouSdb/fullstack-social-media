@@ -18,9 +18,21 @@ button {
     color: white;
     width: fit-content;
     margin: auto;
+
 }
 
 h1 {
     margin: auto;
     text-align: center;
+}
+
+.centered-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

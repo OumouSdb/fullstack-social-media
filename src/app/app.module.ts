@@ -15,7 +15,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ButtonComponent } from './shared/button/button.component';
 import { HeaderComponent } from './shared/header/header.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
+import { CreateArticleComponent } from './pages/create-article/create-article.component';
+import { UserProfilComponent } from './user-profil/user-profil.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +33,11 @@ import { HeaderComponent } from './shared/header/header.component';
     ThemeComponent,
     NotFoundComponent,
     ButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    ArticleDetailComponent,
+    CreateArticleComponent,
+    UserProfilComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +46,12 @@ import { HeaderComponent } from './shared/header/header.component';
     MatButtonModule,
     MatSelectModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatDividerModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

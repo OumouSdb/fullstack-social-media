@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ArticleServiceService {
-  private apiUrl = environment.production;
+export class ArticleService {
+  private apiUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
 
   getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(`${this.apiUrl}/articles`);
+    return this.http.get<Article[]>(`${this.apiUrl}/article`);
   }
 
 }
