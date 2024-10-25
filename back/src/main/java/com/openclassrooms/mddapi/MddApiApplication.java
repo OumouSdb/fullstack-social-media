@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EntityScan(basePackages = "Models")
+@EntityScan(basePackages = "com/openclassrooms/mddapi/Models")
 public class MddApiApplication {
 
 	public static void main(String[] args) {
@@ -17,5 +17,6 @@ public class MddApiApplication {
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
+
 
 }
