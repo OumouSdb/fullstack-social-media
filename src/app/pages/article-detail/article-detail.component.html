@@ -1,0 +1,42 @@
+<div class="article-container">
+    <button mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1 class="article-title">Titre de l’article sélectionné</h1>
+
+    <div class="article-info">
+        <span>Date</span>
+        <span>Auteur</span>
+        <span>Thème</span>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <mat-card class="article-content">
+        <p>
+            Content: lorem ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+        </p>
+    </mat-card>
+
+    <mat-divider></mat-divider>
+
+    <h2>Commentaires</h2>
+
+    <div class="comment-container">
+        <mat-card class="comment-card">
+            <span class="username">username</span>
+            <p>contenu du commentaire</p>
+        </mat-card>
+    </div>
+
+    <mat-form-field appearance="outline" class="comment-input">
+        <textarea matInput placeholder="Écrivez ici votre commentaire" rows="3"></textarea>
+    </mat-form-field>
+
+    <button mat-icon-button class="send-button">
+        <mat-icon>send</mat-icon>
+    </button>
+</div>

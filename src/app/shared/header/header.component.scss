@@ -9,9 +9,14 @@ div {
     width: 95%;
 }
 
+div ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
 div ul a {
     color: black;
     text-decoration-line: none;
-    display: inline-flex;
-
 }
