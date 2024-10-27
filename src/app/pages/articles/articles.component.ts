@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Article } from 'src/app/Interfaces/Article';
+import { ArticleService } from 'src/app/service/article-service';
 
 @Component({
   selector: 'app-articles',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
-
-  constructor() { }
+  articles: Article[] = [];
+  constructor(private articlesService: ArticleService) { }
 
   ngOnInit(): void {
+
+    this.articlesService.getArticles().pipe().subscribe(value => {
+      this.articles = value;
+
+      console.log(this.articles);
+
+    })
   }
 
 }
