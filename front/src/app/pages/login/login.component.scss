@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 25%;
+}
+
+.form input {
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+button {
+    background-color: #7763c5;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    margin: auto;
+
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.centered-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

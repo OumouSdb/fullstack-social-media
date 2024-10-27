@@ -1,0 +1,23 @@
+div {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    /* Espace entre les cartes */
+    justify-content: flex-start;
+    /* Aligne les cartes au début */
+}
+
+.example-card {
+    flex: 1 1 calc(25% - 16px);
+    /* Chaque carte occupe 25% de la ligne */
+    max-width: calc(25% - 16px);
+    /* Empêche la carte de s'étendre au-delà de 25% */
+    box-sizing: border-box;
+}
