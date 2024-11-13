@@ -78,8 +78,6 @@ public class UserService {
     User user = userRepository.findByEmail(username);
 
     String role = user.getRole();
-
-    // Utilisation des bons getters
     return new LoginResponseDto(user.getId(), user.getFirstname(), user.getLastname(),
       user.getEmail(), user.getCreated_at(), user.getUpdated_at(),
       token, role);

@@ -25,6 +25,10 @@ public class CommentsService {
     return modelMapper.map(comments, CommentsDto.class);
   }
 
+  public List<Comments> getCommentsByArticleId(Long articleId) {
+    return commentsRepository.findByArticleId(articleId);
+  }
+
   // Méthode pour convertir un CommentDto en Comment
   private Comments convertToEntity(CommentsDto commentsDto) {
     return modelMapper.map(commentsDto, Comments.class);

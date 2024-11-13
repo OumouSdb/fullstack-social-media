@@ -38,7 +38,7 @@ public class SubjectController {
        return this.subjectService.findById(id);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<SubjectDto> getAll(){
         return this.subjectService.getAll();
     }

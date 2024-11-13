@@ -1,10 +1,8 @@
 package com.openclassrooms.mddapi.Controllers;
 
 import com.openclassrooms.mddapi.Dto.UserDto;
-import com.openclassrooms.mddapi.Models.User;
 import com.openclassrooms.mddapi.Services.UserService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +21,13 @@ public class UserController {
         return this.userService.saveUser(user);
     }
 
-    @DeleteMapping("/{id}")
+  @PutMapping("/save/{id}")
+  public UserDto updateUser(@PathVariable Long id, @RequestBody UserDto user) {
+    user.setId(id);
+    return this.userService.save(user);
+  }
+
+  @DeleteMapping("/{id}")
     public void deleteById(@PathVariable long id) {
         this.userService.deleteById(id);
     }
