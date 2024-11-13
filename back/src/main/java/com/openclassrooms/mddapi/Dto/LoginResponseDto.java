@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 public class LoginResponseDto {
 
 	private Long id;
-	private String firstName;
-  private String lastName;
+	private String firstname;
+  private String lastname;
 	private String email;
 	private Date createdAt;
 	private Date updatedAt;

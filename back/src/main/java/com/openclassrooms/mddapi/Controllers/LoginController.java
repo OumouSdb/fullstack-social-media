@@ -1,5 +1,4 @@
 package com.openclassrooms.mddapi.Controllers;
-
 import com.openclassrooms.mddapi.Dto.LoginDto;
 import com.openclassrooms.mddapi.Dto.LoginResponseDto;
 import com.openclassrooms.mddapi.Dto.UserDto;
