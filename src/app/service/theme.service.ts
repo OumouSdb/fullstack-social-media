@@ -14,6 +14,6 @@ export class ThemeService {
 
 
   getSubjects(): Observable<Subject[]> {
-    return this.http.get<Subject[]>(`${this.apiUrl}/subject/`);
+    return this.http.get<Subject[]>(`${this.apiUrl}/subject`);
   }
 }

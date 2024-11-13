@@ -1,23 +1,19 @@
-<div class="article-container">
-    <button mat-icon-button>
+<div class="article-container" *ngIf="article">
+    <button mat-icon-button (click)="back()">
         <mat-icon>arrow_back</mat-icon>
     </button>
-    <h1 class="article-title">Titre de l’article sélectionné</h1>
-
-    <div class="article-info">
-        <span>Date</span>
-        <span>Auteur</span>
-        <span>Thème</span>
+    <h1 class="article-title"> {{article.title}}</h1>
+    <div class="article-info" *ngIf="article.user">
+        <span>{{ article.user.firstname }} {{ article.user.lastname }} </span>
+        <span>{{ article.date | date: 'shortDate' }}</span>
+        <span>{{ article.subject.name }}</span>
     </div>
 
     <mat-divider></mat-divider>
 
     <mat-card class="article-content">
         <p>
-            Content: lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            {{ article.content }}
         </p>
     </mat-card>
 
@@ -25,18 +21,19 @@
 
     <h2>Commentaires</h2>
 
-    <div class="comment-container">
-        <mat-card class="comment-card">
-            <span class="username">username</span>
-            <p>contenu du commentaire</p>
+    <div class="comment-container" *ngIf="comments.length > 0">
+        <mat-card class="comment-card" *ngFor="let c of comments">
+            <span class="username" *ngIf="c.user">{{ c.user.firstname }} {{ c.user.lastname }}</span>
+            <p>{{ c.content }}</p>
         </mat-card>
     </div>
 
-    <mat-form-field appearance="outline" class="comment-input">
-        <textarea matInput placeholder="Écrivez ici votre commentaire" rows="3"></textarea>
+    <mat-form-field appearance="outline" class="comment-input" [formGroup]="form">
+        <textarea matInput placeholder="Écrivez ici votre commentaire" rows="3" formControlName="content" name="content"
+            id="content"></textarea>
     </mat-form-field>
 
     <button mat-icon-button class="send-button">
-        <mat-icon>send</mat-icon>
+        <mat-icon (click)="send()">send</mat-icon>
     </button>
 </div>

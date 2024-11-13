@@ -3,7 +3,8 @@ import { User } from "./User";
 
 
 export interface Article {
-    id: number;
+    author: any;
+    id: string;
     title: string;
     content: string;
     date: Date;

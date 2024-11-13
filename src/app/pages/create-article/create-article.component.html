@@ -1,17 +1,24 @@
-<h1>Créer un nouvel article</h1>
-<mat-form-field>
-    <mat-label>Input</mat-label>
-    <input matInput>
-</mat-form-field>
-<mat-form-field>
-    <mat-label>Select</mat-label>
-    <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
-    </mat-select>
-</mat-form-field>
-<mat-form-field>
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-    <mat-card-footer><button>Créer</button></mat-card-footer>
-</mat-form-field>
+<h1 class="title">Créer un nouvel article</h1>
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Sélectionner un thème</mat-label>
+        <mat-select formControlName="subject">
+            <mat-option value="" disabled>Sélectionner un thème</mat-option>
+            <mat-option *ngFor="let subject of subjects" [value]="subject.id">{{ subject.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Titre de l'article</mat-label>
+        <input matInput type="text" formControlName="title" placeholder="Titre de l'article">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Contenu de l'article</mat-label>
+        <textarea matInput formControlName="content" placeholder="Contenu de l'article"></textarea>
+    </mat-form-field>
+
+    <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Créer</button>
+    </div>
+</form>
