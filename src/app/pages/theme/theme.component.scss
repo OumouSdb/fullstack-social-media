@@ -1,16 +1,50 @@
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    /* Espace entre les cartes */
-    justify-content: flex-start;
-    /* Aligne les cartes au début */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.example-card {
-    flex: 1 1 calc(25% - 16px);
-    /* Chaque carte occupe 25% de la ligne */
-    max-width: calc(25% - 16px);
-    /* Empêche la carte de s'étendre au-delà de 25% */
-    box-sizing: border-box;
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.theme-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.theme-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    border-radius: 24px;
+    /* Pour que le bouton ait un style similaire à la maquette */
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.message-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+        /* Pour que le bouton soit responsive */
+    }
 }

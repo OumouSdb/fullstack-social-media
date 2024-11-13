@@ -3,9 +3,9 @@ import { User } from "./User";
 
 
 export interface Comment {
-    id: number;
+    id?: number;
     content: string;
-    date: Date;
-    user: User;  // Auteur du commentaire
-    article: Article;  // Article auquel le commentaire est lié
+    date?: Date;
+    user?: Partial<User>;
+    article: Partial<Article>;
 }

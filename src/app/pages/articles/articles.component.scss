@@ -1,23 +1,51 @@
-div {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.toolbar {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    align-items: center;
+    margin: 20px;
 }
 
+.create-button {
+    margin-right: auto;
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+}
 
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    /* Espace entre les cartes */
-    justify-content: flex-start;
-    /* Aligne les cartes au début */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.example-card {
-    flex: 1 1 calc(25% - 16px);
-    /* Chaque carte occupe 25% de la ligne */
-    max-width: calc(25% - 16px);
-    /* Empêche la carte de s'étendre au-delà de 25% */
-    box-sizing: border-box;
+.article-card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sort-container {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
