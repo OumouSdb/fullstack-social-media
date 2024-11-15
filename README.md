@@ -58,3 +58,16 @@ Utilisez le modèle suivant pour structurer votre base de données :
    spring.jpa.hibernate.ddl-auto=update
    spring.jpa.show-sql=true
    spring.jpa.properties.hibernate.format_sql=true
+
+   ### 3. Démarrage du backend
+
+Dans votre IDE, appuyez sur le bouton **RUN** pour démarrer le backend de l'API.
+
+### 4. Démarrage du frontend
+
+1. Ouvrez un terminal dans le répertoire du frontend.
+2. Exécutez la commande suivante pour lancer le serveur Angular :
+
+   ```bash
+   ng serve
+
