@@ -1,26 +1,9 @@
-<header class="header">
-    <div class="logo">
-        <img src="./../../../assets/logo_p6.png" alt="Logo entreprise" [routerLink]="'/'" alt="Logo" class="logo-img">
-    </div>
+<div>
+    <img src="./../../../assets/logo_p6.png" alt="Logo entreprise" [routerLink]="'/'">
 
-    <!-- Burger Menu Button -->
-    <button class="burger-menu" (click)="toggleMenu()">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-    </button>
-
-    <!-- Navigation Links -->
-    <nav class="nav-links" [ngClass]="{'open': menuOpen}">
+    <ul>
         <a [routerLink]="'/articles'">Articles</a>
-        <a [routerLink]="'/subject'">Thèmes</a>
-        <div class="profile-icon">
-
-            <!-- Remplacez l'image de profil par une icône Material -->
-            <span class="material-symbols-outlined profile-icon" [routerLink]="'/user'">
-                account_circle
-            </span>
-
-        </div>
-    </nav>
-</header>
+        <a [routerLink]="'theme'">Thèmes</a>
+        <i class="bi bi-person-fill"></i>
+    </ul>
+</div>

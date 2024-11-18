@@ -11,16 +11,9 @@ export class ArticleService {
   private apiUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
+
   getArticles(): Observable<Article[]> {
     return this.http.get<Article[]>(`${this.apiUrl}/article`);
-  }
-
-  getArticleById(id: any) {
-    return this.http.get<Article>(`${this.apiUrl}/article/` + id);
-  }
-
-  createArticle(article: Article): Observable<Article> {
-    return this.http.post<Article>(`${this.apiUrl}/article/save`, article);
   }
 
 }

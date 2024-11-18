@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Route, Router } from '@angular/router';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

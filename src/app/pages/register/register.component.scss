@@ -1,44 +1,29 @@
-body {
+.form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    flex-direction: column;
+    margin: auto;
+    width: 25%;
 }
 
-.title {
+.form input {
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+button {
+    background-color: #7763c5;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+h1 {
+    margin: auto;
     text-align: center;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 500px;
-    /* Ajuste selon la taille souhaitée */
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.form {
-    width: 100%;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
+.centered-btn {
     margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .form-container {
-        padding: 40px;
-    }
+    text-align: center;
 }
